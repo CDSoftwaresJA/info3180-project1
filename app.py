@@ -67,7 +67,7 @@ def profile_add():
         picture=PhotoForm.picture.data
         print(picture)
         filename = images.save(PhotoForm.picture.data)
-        filename= 'static/'+filename
+        filename= filename
         data=User(1,PhotoForm.fname.data,PhotoForm.lname.data,PhotoForm.gender.data,PhotoForm.email.data,PhotoForm.biography.data,filename)
         db.session.add(data)
         db.session.flush()
