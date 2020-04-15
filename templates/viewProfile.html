@@ -1,0 +1,24 @@
+   {% extends 'base.html' %}
+
+{% block main %}
+
+
+            <div>
+               <div>{{ user['id'] }}</div>
+               <div> {{ user['picture'] }}</div>
+               <div> {{ user['fname'] }} {{ user['lname'] }} </div>
+               <div>{{ user['email'] }}</div>
+               <div>{{ user['location'] }}</div>
+               
+               <div>
+                  <b>About Me</b>
+                  
+               <div>{{ user['biography'] }}</div>
+               </div>
+               <button>Send Message</button>
+               <button>Follow</button>
+                <p><a href="{{ url_for('profiles') }}">Back</a></p>
+               <br>
+               <br>
+            <div>
+{% endblock %}

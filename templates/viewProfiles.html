@@ -1,0 +1,20 @@
+   {% extends 'base.html' %}
+
+{% block main %}
+
+
+         {% for user in users %}
+            <div>
+               <div>{{ user['id'] }}</div>
+               <div> {{ user['fname'] }} {{ user['lname'] }} </div>
+               <div>{{ user['gender'] }}</div>
+               <div>{{ user['location'] }}</div>
+               <p><a href="{{ url_for('profile_view',id=user['id']) }}">View Profile</a></p>
+               
+               <br>
+               <br>
+            <div>
+         {% endfor %}
+
+
+{% endblock %}

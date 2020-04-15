@@ -1,0 +1,34 @@
+   {% extends 'base.html' %}
+
+{% block main %}
+     <form action="{{ url_for('profile_add') }}" method=post enctype="multipart/form-data">
+        {{ form.hidden_tag() }}
+        <p>
+            {{ form.email.label }}
+            {{ form.email(size=32) }}
+            <br>
+            {{ form.fname.label }}
+            {{ form.fname(size=32) }}
+            <br>
+            {{ form.lname.label }}
+            {{ form.lname(size=32) }}
+            <br>
+            {{ form.gender.label }}
+            {{ form.gender(size=32) }}
+            <br>
+            {{ form.biography.label }}
+            {{ form.biography(size=32) }}
+            <br>
+            {{ form.location.label }}
+            {{ form.location(size=32) }}
+            <br>
+            {{ form.picture.label }}
+            {{ form.picture(size=32) }}
+            <br>
+            {{ form.submit(size=32) }}
+            {{ form.csrf_token }}
+        </p>
+
+   </form>
+
+{% endblock %}
