@@ -5,6 +5,7 @@ from werkzeug.utils import secure_filename
 import os
 
 app = Flask(__name__)
+app.config.from_object(__name__)
 app.config['SECRET_KEY'] = 'some$3cretKey'
 app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://icmwuvgxqphskl:29518807a50b98eff4637464f45393efd41a9e80b3dff925af7c55e28e967b28@ec2-54-210-128-153.compute-1.amazonaws.com:5432/d9u7e52sn8k5ti'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
