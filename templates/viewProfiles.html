@@ -6,6 +6,7 @@
          {% for user in users %}
             <div>
                <div>{{ user['id'] }}</div>
+               <img src="{{ user['picture'] }}"  />
                <div> {{ user['fname'] }} {{ user['lname'] }} </div>
                <div>{{ user['gender'] }}</div>
                <div>{{ user['location'] }}</div>
